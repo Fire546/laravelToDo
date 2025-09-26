@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('todos', function (Blueprint $table) {
             $table->uuid('id')->primary();
             $table->text('text');
-            $table->foreignId('user_id');
+            $table->foreignUuid('user_id');
             $table->timestamps();
         });
     }
